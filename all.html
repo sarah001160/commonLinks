@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>常用連結</title>
+  <link rel="stylesheet" href="css/all.css">
+  <!-- Vue.js --->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.4/vue.global.min.js"
+    integrity="sha512-zCDqM0UIijinAmuLOGCNTPkKFg0zFx3/mB1NXvsJ6bO0YfYZzF91nR0UY/PvTLU7a8qRfjaKzjDfgUNTCKfn0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="js/all.js"></script>
+</head>
+
+<body class="animated-background">
+  <section id="vue-section">
+    <div class="searchBar">
+      <input type="text" placeholder="請輸入關鍵字" v-model="searchKey" @change="doSearch()">
+      <button class="searchBtn" @click="doSearch()">搜尋</button>
+    </div>
+    <div class="cardContainer">
+      <div class="card" v-for="(d, index) in searchResult" :key="index">
+        <a :href="d.url" target="_blank">
+          <!-- <img src="https://via.placeholder.com/300x200" alt="Placeholder Image" class="card-image"> -->
+          <div class="card-content">
+            <h3 class="card-title">{{ d.name }}</h3>
+            <p class="card-description"></p>
+          </div>
+
+        </a>
+      </div>
+
+    </div>
+
+
+
+  </section>
+</body>
+
+</html>

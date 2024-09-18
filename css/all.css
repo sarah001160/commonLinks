@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  color: white;
+}
+a {
+  text-decoration: none;
+}
+.animated-background {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(45deg, #1315a4, #1288a3, #4d1b7e, #3636fe);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 0%;
+  }
+  50% {
+      background-position: 100% 100%;
+  }
+  100% {
+      background-position: 0% 0%;
+  }
+}
+
+#vue-section {
+  margin: 0 auto;
+  padding: s2em;
+}
+.searchBar {
+  margin: 0 auto;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+}
+.searchBar input {
+  padding: 5px 10px;
+  width: 250px;
+  margin-right: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  outline: none;
+}
+.searchBtn {
+  padding: 5px 10px;
+  background: white;
+  color:#1315a4;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.searchBtn:hover{
+  color: blue;
+  box-shadow: 1px 1px 10px white;
+}
+.cardContainer{
+  margin: 0 auto;
+  width: 80%;
+  padding: 2em;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 3 欄，每列 1fr */
+  gap: 15px; /* 行和列之間的間距 */
+}
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 5px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+.card:hover {
+  background: rgb(235, 187, 83);
+  border-bottom: 2px solid white;
+}
+.card:hover .card-title {
+  color: white
+}
+.card-image {
+  width: 100%;
+  height: auto;
+}
+.card-content {
+  padding: 16px;
+}
+.card-title {
+  margin: 0;
+  color: #4e4a4a;
+}
+.card-description {
+  color: #666;
+  margin: 8px 0;
+}
